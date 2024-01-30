@@ -22,7 +22,7 @@ const elderly = Number(priceelderly.toFixed(2));
 
 const regular = Number(pricemajor.toFixed(2));  
 
-
+let finalPrice;
 
 create.addEventListener("click",
     function () {
@@ -31,7 +31,14 @@ create.addEventListener("click",
 )
 
 create.addEventListener("click", 
-    function () { document.getElementById("total").innerText = `${minor}`;
-        
+    function () { 
+        document.getElementById("total").innerHTML = finalPrice;
+        if (age < 18) {
+            finalPrice = minor;
+        } else if (age >= 65) {
+            finalPrice = elderly;
+        } else {
+            finalPrice = regular;
+        }
     }
 )

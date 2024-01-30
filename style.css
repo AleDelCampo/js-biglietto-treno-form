@@ -3,23 +3,3 @@
     padding: 0;
     box-sizing: border-box;
 }
-/*<form>
-            <label for="age">Fascia d'età:</label>
-            <select name="age" id="age">
-            <option value="" selected="selected" id="minorsPeople">Minorenne</option>
-            <option value="" selected="selected" id="majorsPeople">Anziano</option>
-            <option value="" selected="selected" id="elderlyPeople">Maggiorenne</option>
-        </select>
-        </form>
-
-        
-
-const saleminor = pricexkm * `${price}` * 20 / 100;
-
-const saleelderly = pricexkm * `${price}` * 40 / 100;
-
-const pricemajor = `${price}` * `${pricexkm}`;
-
-const priceminor = `${price}` * `${pricexkm}` - `${saleminor}`;
-
-const priceelderly = `${price}` * `${pricexkm}` - `${saleelderly}`;
