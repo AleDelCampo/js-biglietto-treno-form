@@ -1,28 +1,16 @@
-const pricexkm = 0.21;
+const completeName = document.getElementById("name");
 
-let km = Number(document.querySelector("#kilometers"));
+const km = document.querySelector("#kilometers");
 
-let completeName = document.querySelector("#name");
+const age = document.querySelector("#eta");
 
-let age = Number(document.querySelector("#eta"));
+const button = document.querySelector("#create");
 
-const saleminor = `${km}` *  pricexkm * 20 / 100;
+const totalPrice = document.getElementById("total");
 
-const saleelderly =`${km}` * pricexkm * 40 / 100;
+let regularPrice;
 
-const pricemajor = `${km}` * `${pricexkm}`;
-
-const priceminor = `${km}` * `${pricexkm}` - `${saleminor}`;
-
-const priceelderly = `${km}` * `${pricexkm}` - `${saleelderly}`;
-
-const minor = Number(priceminor.toFixed(2)); 
-
-const elderly = Number(priceelderly.toFixed(2));
-
-const regular = Number(pricemajor.toFixed(2));  
-
-let finalPrice;
+let finalPrice
 
 create.addEventListener("click",
     function () {
@@ -32,13 +20,20 @@ create.addEventListener("click",
 
 create.addEventListener("click", 
     function () { 
-        document.getElementById("total").innerHTML = finalPrice;
-        if (age < 18) {
-            finalPrice = minor;
-        } else if (age >= 65) {
-            finalPrice = elderly;
-        } else {
-            finalPrice = regular;
-        }
-    }
+        regularPrice = km.value * 0.21;
+
+        finalPrice = regularPrice;
+
+        if (age.value < 18) {
+            finalPrice = regularPrice - (regularPrice * 0.2);
+            totalPrice.innerHTML = "20% di sconto per i Minorenni!!"
+        } else if (age.value >= 65) {
+            finalPrice = regularPrice - (regularPrice * 0.4);
+            totalPrice.innerHTML = "40% di sconto per igli Anziani!!"
+        }   
+
+        finalPrice = finalPrice.toFixed(2)
+
+        totalPrice.innerHTML += `Il totale del pagamento è di:€${finalPrice}`;
+    }       
 )
