@@ -38,7 +38,7 @@ create.addEventListener("click",
     
             finalPrice = finalPrice.toFixed(2)
     
-            totalPrice.innerHTML += `Il totale del pagamento è di:€${finalPrice}`;
+            totalPrice.innerHTML = `Il totale del pagamento è di:€${finalPrice}`;
 
             document.querySelector("#window").style.display = "block";
 
