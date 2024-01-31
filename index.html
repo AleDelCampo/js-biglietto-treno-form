@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Js-Treno-Form</title>
 </head>
 <body class="bg-danger">
 
-    <h1 id="title" class="text-white">
+    <h1 id="title" class="text-white d-flex mb-5 justify-content-center">
         Calcola il prezzo del tuo biglietto!!
     </h1>
 
-    <form>
+    <form class="container flex-row d-flex gap-5 mb-5 justify-content-center">
+        
     <div>
         <label for="name">Nome e Cognome:</label>
         <input type="text" id="name" class="text-black">
@@ -28,9 +29,10 @@
         <label for="eta">La tua età:</label>
         <input type="number" id="eta" class="text-black">
     </div>
-
+        
     </form>
 
+    <div class="container flex-row d-flex gap-5 mb-5 justify-content-center">
     <div>
         <button id="create" class="text-black">Genera</button>
     </div>
@@ -38,18 +40,20 @@
     <div>
         <button id="cancel" class="text-black">Annulla</button>
     </div>
-    
-    <div>
-        <div>
-            <h2>Dettagli Passeggero</h2>
-            <div>   
-                <span id="detailNameSurname"></span>
-            </div>
-            <div>
-                <span id="total"></span>
-            </div>
-        </div>
     </div>
+    
+    
+    <div id="window" class="container flex-column gap-5 justify-content-center bg-danger-subtle">
+        <h2 class="text-danger">Dettagli Passeggero :</h2>
+        <div>   
+            <span id="detailNameSurname" class="text-danger"></span>
+        </div>
+        <div>
+            <span id="total" class="text-danger"></span>
+        </div>
+        <div id="error" class="text-black fs-5"></div>
+    </div>
+   
 
     <script type="text/javascript" src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
